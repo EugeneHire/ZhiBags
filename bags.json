@@ -1,0 +1,20 @@
+{
+    "1":{
+            "id": 0,
+            "price": 100,
+            "name": "first"
+        },
+
+    "2":
+        {
+            "id": 1,
+            "price": 110,
+            "name": "second"
+        },
+    "3":
+        {
+            "id": 2,
+            "price": "120",
+            "name": "third"
+        }
+}
