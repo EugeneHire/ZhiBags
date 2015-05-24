@@ -3,6 +3,8 @@ var app = express();
 
 var bagsJson =require('./bags.json') ;
 var bags= Object.keys(bagsJson).map(function(k) { return bagsJson[k] });
+var quotesJson =require('./quotes.json') ;
+var quotes= Object.keys(bagsJson).map(function(k) { return bagsJson[k] });
 
 
 app.get('/', function(req, res){
@@ -13,6 +15,10 @@ app.use('/js', express.static(__dirname + '/js'));
 
 app.get('/bags', function(req, res){  
         res.send(JSON.stringify(bags));
+    });
+
+app.get('/quotes', function(req, res){  
+        res.send(JSON.stringify(quotes));
     });
 
 app.delete('/bag:id', function(req, res){
