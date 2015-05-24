@@ -1,24 +1,8 @@
 var express = require('express');
 var app = express();
 
-var bags = [
-        {
-            id: 0,
-            price: 100,
-            name: 'first'
-        },
-        {
-            id: 1,
-            price: 110,
-            name: 'second'
-        },
-        {
-            id: 2,
-            price: 120,
-            name: 'third'
-        }
-    ];
-
+var bagsJson =require('./bags.json') ;
+var bags= Object.keys(bagsJson).map(function(k) { return bagsJson[k] });
 
 
 app.get('/', function(req, res){
@@ -30,6 +14,22 @@ app.use('/js', express.static(__dirname + '/js'));
 app.get('/bags', function(req, res){  
         res.send(JSON.stringify(bags));
     });
+
+app.delete('/bag:id', function(req, res){
+   id=req.params.id.shift()
+   bags = bags.filter(function(obj) {
+   return obj.id != id;
+   });
+   console.log(bags)
+   res.send(bags);
+   
+   fs.writeFile('bags.json', JSON.stringify(bags), function (err,data) {
+        if (err) {
+        return console.log(err);
+        }
+        console.log(data);
+    });
+});
 
 app.listen(8080);
 console.log("app listen on 8080");
