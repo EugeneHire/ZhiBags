@@ -12,13 +12,16 @@ var gulp = require('gulp'),
     nodemon = require('nodemon');
 
 gulp.task('sass', function () {
-  gulp.src('./sass/*.scss')
+  console.log('compiling!');
+  gulp.src('./client/sass/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./client/css'));
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch('.client/sass/**/*.scss', ['sass']);
+  gulp.watch('.client/sass/*.scss', ['sass']);
+  console.log('watching');
 });
 
 gulp.task('start', function () {

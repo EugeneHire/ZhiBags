@@ -1,2 +1,42 @@
 .sample-class {
   border-width: 1px; }
+  .sample-class .sample-class-child {
+    border-width: 444px; }
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+.red {
+  display: none; }
+
+.u-fullWidth {
+  width: 100%; }
+
+.u-halfWidth {
+  width: 50%; }
+
+@media only screen and (max-width: 1023px) {
+  .u-halfWidth--forMobiles {
+    width: 50%; } }
+
+@media only screen and (max-width: 1023px) {
+  .u-fullWidth--forMobiles {
+    width: 100%; } }
+
+.headerSection {
+  height: 200px;
+  background-color: grey; }
+  @media only screen and (max-width: 1023px) {
+    .headerSection {
+      height: 100px; } }
+
+.mainSection {
+  height: auto;
+  min-height: 700px;
+  background-color: red; }
+
+.footerSection {
+  height: 300px;
+  background-color: blue; }
