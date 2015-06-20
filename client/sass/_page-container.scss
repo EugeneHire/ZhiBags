@@ -1,6 +1,50 @@
-.another-class {
-    border-width: 1px;
-    .sample-class-child {
-        border-width: 444px;
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+} 
+.red {
+    display: none; 
+}
+.u-fullWidth {
+    width: 100%;
+}
+
+.u-halfWidth {
+    width: 50%;
+}
+
+.u-halfWidth--forMobiles {
+    @include respondTo(mobiles) {
+        width: 50%;
     }
+}
+
+.u-fullWidth--forMobiles { 
+    @include respondTo(mobiles) { 
+        width: 100%;
+    }
+}
+
+.pageContainer {
+    
+} 
+
+.headerSection {
+    height: 200px;
+    background-color: grey;
+    @include respondTo('mobiles') {
+        height: 100px;
+    }
+}
+
+.mainSection {
+    height: auto;
+    min-height: 700px;
+    background-color: red;
+}
+
+.footerSection {
+    height: 300px;
+    background-color: blue;
 }
