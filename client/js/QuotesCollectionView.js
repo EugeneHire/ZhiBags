@@ -1,9 +1,12 @@
 var QuotesCollectionView = Backbone.View.extend({
-	initialize: function() {
+	initialize: function () {
 		this.collection = new QuotesCollection();
-		this.render = function() {
-			console.log("name")
-		}
-		this.collection.on('sync', this.render())
+		this.collection.on('sync', this.render, this);
+		this.collection.fetch();
+	},
+	render: function () {
+		this.collection.each(function(quote) {
+			var quoteView = new QuoteView({model: quote});
+		});
 	}
 })
