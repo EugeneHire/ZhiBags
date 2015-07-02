@@ -1,1 +1,3 @@
-var quotesCollectionView = new QuotesCollectionView();
+var quotesCollectionView = new QuotesCollectionView({ 
+		el: $('headerSection u-fullWidth')
+	});

@@ -6,7 +6,8 @@ var QuotesCollectionView = Backbone.View.extend({
 	},
 	render: function () {
 		this.collection.each(function(quote) {
-			var quoteView = new QuoteView({model: quote});
+			var quoteView = new QuoteView({model: quote})
+			quoteView.render();
 		});
 	}
 })
