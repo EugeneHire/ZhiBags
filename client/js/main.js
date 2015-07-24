@@ -1,3 +1,6 @@
-var quotesCollectionView = new QuotesCollectionView({ 
-		el: $('.headerSection')
-	});
+$(function() {
+	var quotesCollectionView = new QuotesCollectionView({ 
+			el: $('.headerSection')
+		})
+	}
+);
