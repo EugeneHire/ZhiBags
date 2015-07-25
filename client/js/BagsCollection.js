@@ -1,4 +1,7 @@
 var BagsCollection=Backbone.Collection.extend({
 	model:Bag,
-	url:"/bags"
+	url:"/bags",
+	initialize: function(argument) {
+		// body...
+	}
 });

@@ -9,11 +9,13 @@ var quotes= Object.keys(bagsJson).map(function(k) { return bagsJson[k] });
 
 app.get('/', function(req, res){
 	res.sendfile('client/index.html');
+  console.log("TTT");
 });
 app.use('/client', express.static(__dirname + '/client'));
 app.use('/js', express.static(__dirname + '/js'));
 
 app.get('/bags', function(req, res){  
+  console.log("fetched bags")
         res.send(JSON.stringify(bags));
     });
 
