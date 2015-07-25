@@ -18,7 +18,12 @@ app.get('/bags', function(req, res){
   console.log("fetched bags")
         res.send(JSON.stringify(bags));
     });
+app.get('/bags/:id', function(req,res){
+console.log("bag"+req.params.id+"fetch");
+res.send(bags[req.params.id]);
 
+
+})
 app.get('/quotes', function(req, res){  
         res.send(JSON.stringify(quotes));
     });

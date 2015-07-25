@@ -1,19 +1,38 @@
 [{
             "id": 0,
             "price": 100,
-            "name": "first"
+            "name": "bag0",
+            "description":"Its a cool bag 0",
+            "quantity":"5",
+            "imgUrl":"0.jpg"
+
         },
 
     
         {
             "id": 1,
             "price": 110,
-            "name": "second"
+            "name": "bag1",
+            "description":"Its a cool bag 1",
+            "quantity":"12",
+            "imgUrl":"1.jpg"
+
         },
     
         {
             "id": 2,
             "price": "120",
-            "name": "third"
+            "name": "bag2",
+            "description":"Its a cool bag 2",
+            "quantity":"1",
+            "imgUrl":"2.jpg"
+        },
+         {
+            "id": 3,
+            "price": "120",
+            "name": "bag3",
+            "description":"Its a cool bag 3",
+            "quantity":"51",
+            "imgUrl":"3.jpg"
         }
 ]
