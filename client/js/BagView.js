@@ -11,4 +11,3 @@ var BagView=Backbone.View.extend({
 	}
 
 });
- 
