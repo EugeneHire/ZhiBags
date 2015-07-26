@@ -23,7 +23,6 @@ var bagsCollectionView = new BagsCollectionView({
 	el:$(".mainSection")
 });
 
-bagsCollectionView.render()
 console.log(bagsCollectionView.el);
 
 
