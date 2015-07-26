@@ -13,13 +13,14 @@ var BagsCollectionView=Backbone.View.extend({
 
 	},
 	initialize: function() {
+	this.collection.on("sync", this.render, this)
     this.collection.fetch();
   }});
 
-bags.fetch();
+
 var bagsCollectionView = new BagsCollectionView({
 	collection:bags,
-	el:$("#lel")
+	el:$(".mainSection")
 });
 
 bagsCollectionView.render()
